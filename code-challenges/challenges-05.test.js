@@ -213,6 +213,7 @@ removeLastCharacters('Gregor', -2) returns 'Gregor'
 removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
+
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
 };
@@ -274,6 +275,7 @@ describe('Testing challenge 1', () => {
     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
   })
 });
+
 
 describe('Testing challenge 2', () => {
   test('It should return an array with three items removed', () => {
