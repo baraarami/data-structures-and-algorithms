@@ -26,9 +26,9 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-  let height= starWarsArr.sort((a,b)=>{
-    let tall=(b.height)-(a.height);
-    return tall ;
+  let height=starWarsArr.sort((a,b)=>{
+    let tall= (b.height) - (a.height);
+    return tall;
   });
   return height;
 }
@@ -41,8 +41,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
-  arr.splice(idx, 3);
-  return arr
+  arr.splice(idx , 3 );
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
-  let text =arr.join(' ');
+  let text=arr.join(' ');
   return text;
 };
 
@@ -73,10 +73,10 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  for (let i=0 ; i<= str.length ; i++){
-    let newstr=str.slice(i);
-    result.push(newstr);
+  for( let i=0 ; i <=str.length ; i++){
+    result.push(str.slice(i , str.length));
   }
+
   return result;
 };
 
@@ -90,8 +90,11 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  let splitx=arr.split('')
-  return splitx;
+  let newArr=[];
+  for( let i=0 ; i <arr.length ; i++){
+    newArr.push(arr.slice(i,i+1));
+  }
+  return newArr;
 };
 
 
@@ -139,12 +142,11 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  let regex=/^(\d*\s)\S*\s/ ;
-  for( let i=0 ; i < gruffaloCrumble.ingredients.length ; i++){
-    let deletelength =gruffaloCrumble.ingredients[i].match(regex)[0].length;
-    let name =gruffaloCrumble.ingredients[i].slice(deletelength);
-
- result.push(name);
+  let regex= /^(\d*\s)\S*\s/;
+  for(let i =0 ; i <gruffaloCrumble.ingredients.length ; i++){
+    let deletlength= gruffaloCrumble.ingredients[i].match(regex)[0].length;
+    let name =gruffaloCrumble.ingredients[i].slice(deletlength);
+    result.push(name)
   }
   return result;
 };
@@ -376,3 +378,5 @@ xdescribe('Testing challenge 13', () => {
     expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
   });
 });
+
+
