@@ -131,9 +131,11 @@ HR has asked you to change the data to make it easier to print so that it looks 
 const updateNumbers = (obj) => {
   // Solution code here...
   let newArray=[];
-  Object.entries(Obj).forEach(value =>{
-    newArray.push(value.join(': '));
-  })
+  let x= Object.keys(obj);
+  let y = Object .values(obj);
+  x.forEach((item , i)=>{
+    newArray.push(`${x[i]}: ${y[i]}`);
+  });
   return newArray;
 };
 
@@ -148,7 +150,9 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  
+  for (let i in arr ){
+    houses.push(arr[i].house)
+  }
   return houses;
 };
 
